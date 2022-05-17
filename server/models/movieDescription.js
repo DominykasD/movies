@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const moviesSchema = mongoose.Schema({
+const movieSchema = mongoose.Schema({
     title: String,
     description: String,
     director: String,
@@ -16,6 +16,6 @@ const moviesSchema = mongoose.Schema({
     },
 });
 
-const MoviesDescription = mongoose.model('MoviesDescription', moviesSchema);
+const MovieDescription = mongoose.model('MovieDescription', movieSchema);
 
-export default MoviesDescription;
+export default MovieDescription;

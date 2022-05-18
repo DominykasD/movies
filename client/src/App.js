@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grid, AppBar, Typography, Grow} from '@material-ui/core';
+import { useDispatch } from 'react-redux';
 
+import { getMovies } from './actions/movies';
 import Form from './components/Form/Form';
 import Movies from './components/Movies/Movies';
 import useStyles from './styles';
 
 const App = () => {
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getMovies());
+    }, [dispatch]);
 
     return (
         <Container maxidth="lg">

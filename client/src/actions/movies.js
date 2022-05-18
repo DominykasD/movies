@@ -14,3 +14,13 @@ export const getMovies = () => async (dispatch) => {
 
     // dispatch(action);
 }
+
+export const addMovie = (movie) => async (dispatch) => {
+    try {
+        const { data } = await api.addMovie(movie);
+
+        dispatch({ type: 'CREATE', payload: data });
+    } catch (error) {
+        console.log(error);
+    }
+}

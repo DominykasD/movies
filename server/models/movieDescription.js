@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const movieSchema = mongoose.Schema({
     title: String,
     description: String,
-    director: String,
+    creator: String,
     tags: [String],
     selectedFile: String,
     likeCount: {

@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core'; 
 import FileBase from 'react-file-base64';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import useStyles from './styles';
-import { addMovie } from '../../actions/movies';
+import { addMovie, updateMovie } from '../../actions/movies';
 
-const Form = () => {
+const Form = (currentId, setCurrentId) => {
     const [movieData, setMovieData] = useState({creator: '', title: '', description: '', tags: '', selectedFile: ''});
+    const movie = useSelector((state) => currentId ? state.movies.find((p) => p._id === currentId) : null);
     const classes = useStyles();
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        if(movie) setMovieData(movie);
+    }, [movie])
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // if(currentId) {
+        //     // dispatch(updateMovie(currentId, movieData));
+        // } else {
+        //     dispatch(addMovie(movieData));
+        // }
         dispatch(addMovie(movieData));
+
     }
 
     const clear = () => {

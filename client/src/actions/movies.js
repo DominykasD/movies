@@ -24,3 +24,13 @@ export const addMovie = (movie) => async (dispatch) => {
         console.log(error);
     }
 }
+
+// export const updateMovie = (id, movie) => async (dispatch) => {
+//     try {
+//         const { data } = await api.updateMovie(id, movie);
+
+//         dispatch({ type: 'UPDATE', payload: data})
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }

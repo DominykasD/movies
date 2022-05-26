@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
 
-import movies from './movies';
+import posts from './posts';
 
-export default combineReducers({ movies });
+export default combineReducers({ posts });

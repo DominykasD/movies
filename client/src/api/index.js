@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/movies'
+const url = 'http://localhost:5000/posts'
 
-export const fetchMovies = () => axios.get(url);
-export const addMovie = (newMovie) => axios.post(url, newMovie);
-// export const updateMovie = (id, updatedMovie) => axios.patch(`${url}/${id}`, updatedMovie);
+export const fetchPosts = () => axios.get(url);
+export const createPost = (newPost) => axios.post(url, newPost);
+export const deletePost = (id) => axios.delete(`${url}/${id}`);

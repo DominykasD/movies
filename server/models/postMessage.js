@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
-const movieSchema = mongoose.Schema({
+const postSchema = mongoose.Schema({
     title: String,
-    description: String,
+    message: String,
     creator: String,
     tags: [String],
     selectedFile: String,
@@ -16,6 +16,6 @@ const movieSchema = mongoose.Schema({
     },
 });
 
-const MovieDescription = mongoose.model('MovieDescription', movieSchema);
+const PostMessage= mongoose.model('PostMessage', postSchema);
 
-export default MovieDescription;
+export default PostMessage;

@@ -28,6 +28,10 @@ cd client
 npm start
 ```
 
+## App screenshot
+![Screenshot 2022-07-13 114250](https://user-images.githubusercontent.com/23237769/178690695-ee15cab9-d689-4dd8-a8c7-c8a71ea565df.png)
+
+
 ## Info
 MongoDb - noSQL database in which data is stored in documents that consist of key-value pairs, sharing a lot of resemblance to to JSON.
 

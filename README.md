@@ -1,28 +1,14 @@
 # Social Media app
-An app where users can create posts, view them, delete them.
+A CRUD app where users can create, update and delete posts.
 
-### Front-end
-JavaScript
-
-React
-
-Redux - app uses actions and reducers.
-
-NodeJS
-
-### Back-end
-MongoDb - stores post message data.
-
-Express - used as backend API server which interacts with MongoDb to serve data to client (React) application.
-
-## How to run
-To run server side
+## Setup
+Server-side:
 ``` bash
 cd server
 npm start
 ```
 
-To run client side
+Client-side:
 ``` bash
 cd client
 npm start
@@ -31,9 +17,12 @@ npm start
 ## App screenshot
 ![Screenshot 2022-07-13 114250](https://user-images.githubusercontent.com/23237769/178690695-ee15cab9-d689-4dd8-a8c7-c8a71ea565df.png)
 
+## Technologies
+Front-end: JavaScript, React, Redux, NodeJS.<br>
+Back-end: MongoDB, Express.
 
 ## Info
-MongoDb - noSQL database in which data is stored in documents that consist of key-value pairs, sharing a lot of resemblance to to JSON.
+MongoDB - NoSQL database in which data is stored in documents that consist of key-value pairs, sharing a lot of resemblance to JSON.
 
 Express - flexible and clean Node.js web application framework. 
 
